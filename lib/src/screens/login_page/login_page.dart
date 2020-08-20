@@ -1,3 +1,4 @@
+import 'package:clone_layout/src/screens/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_layout/src/const/global_const.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -10,7 +11,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   void _homepage() {
-    Navigator.push(context, MaterialPageRoute(builder: null));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
   @override

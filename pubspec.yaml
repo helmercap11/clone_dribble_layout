@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^0.1.3
   font_awesome_flutter: ^8.8.1
   
+  
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +54,11 @@ flutter:
   assets:
     - assets/images/
     - assets/images/initial/laundry.png
+    - assets/images/avatar/avatarIcon.png
+    - assets/images/Home/WashingMachine.png
+    - assets/images/Home/ClothesIron.png
+    - assets/images/Home/DryingClothes.png
+    - assets/images/Home/Seam.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
