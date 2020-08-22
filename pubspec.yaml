@@ -59,6 +59,8 @@ flutter:
     - assets/images/Home/ClothesIron.png
     - assets/images/Home/DryingClothes.png
     - assets/images/Home/Seam.png
+    - assets/images/clothes/Shirt.png
+    - assets/images/clothes/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

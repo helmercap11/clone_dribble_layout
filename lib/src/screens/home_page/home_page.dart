@@ -1,4 +1,6 @@
 import 'package:clone_layout/src/const/global_const.dart';
+import 'package:clone_layout/src/screens/clothers_page/clothers_page.dart';
+import 'package:clone_layout/src/screens/home_page/widgets/bottomNavigationBar.dart';
 import 'package:clone_layout/src/screens/home_page/widgets/custom_categoryBox.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -120,9 +122,17 @@ class _HomePageState extends State<HomePage> {
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
                         children: [
-                          CustomCategoryBox(
-                            image: "assets/images/Home/DryingClothes.png",
-                            title: "Dry Cleaning",
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ClothersPage()));
+                            },
+                            child: CustomCategoryBox(
+                              image: "assets/images/Home/DryingClothes.png",
+                              title: "Dry Cleaning",
+                            ),
                           ),
                           CustomCategoryBox(
                             image: "assets/images/Home/Seam.png",
@@ -136,136 +146,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-
-                //Image.asset("assets/images/initial/laundry.png"),
               ],
             ),
             SizedBox(
               height: 40,
             ),
-            /*Container(
-              child: BottomAppBar(
-                shape: const CircularNotchedRectangle(),
-                notchMargin: 10.0,
-                elevation: 4.0,
-                color: GlobalConstUI.primaryColor,
-                child: new Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.home),
-                      color: Colors.white,
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.menu),
-                      color: GlobalConstUI.greyColor,
-                      onPressed: () {},
-                    ),
-                    CircleAvatar(
-                      backgroundColor: GlobalConstUI.yellowColor,
-                        child: Container(
-                            child: IconButton(
-                      icon: Icon(Icons.add),
-                      color: Colors.white,
-                      onPressed: () {},
-                    ))),
-                    IconButton(
-                      icon: Icon(Icons.notifications),
-                      color: GlobalConstUI.greyColor,
-                      onPressed: () {},
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.person),
-                      color: GlobalConstUI.greyColor,
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
-              ),
-            ),*/
-             Container(
-            decoration: BoxDecoration(
-              //color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                  bottomLeft: Radius.circular(0),
-                  bottomRight: Radius.circular(0)),
-              boxShadow: [
-                BoxShadow(
-                    offset: Offset(0.0, 1.00), //(x,y)
-                    blurRadius: 4.00,
-                    color: GlobalConstUI.primaryColo,
-                    spreadRadius: 1.00),
-              ],
-            ),
-            height: 60,
-            child: ClipRRect(
-                clipBehavior: Clip.hardEdge,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                    bottomLeft: Radius.circular(0),
-                    bottomRight: Radius.circular(0)),
-                child: Container(
-                  child: BottomNavigationBar(
-                    type: BottomNavigationBarType.fixed,
-                    backgroundColor: GlobalConstUI.primaryColor,
-                    showSelectedLabels: false,
-                    showUnselectedLabels: false,
-                    currentIndex: 2,
-                   
-                    // new
-                    items: [
-                      new BottomNavigationBarItem(
-                        icon: Icon(
-                          Icons.home,
-                          size: 30,
-                          color: Colors.white,
-                        ),
-                        title: Text('Calls'),
-                      ),
-                      new BottomNavigationBarItem(
-                        icon: Icon(
-                          Icons.menu,
-                          size: 30,
-                          color: GlobalConstUI.greyColor,
-                        ),
-                        title: Text('Messages'),
-                      ),
-                      new BottomNavigationBarItem(
-                        icon: Icon(
-                          Icons.add,
-                          size: 30,
-                          color: Colors.white,
-                        ),
-                        title: Text('Messages'),
-                        
-                        
-                      
-                      ),
-                      new BottomNavigationBarItem(
-                        icon: Icon(
-                          Icons.notifications,
-                          size: 30,
-                          color: GlobalConstUI.greyColor,
-                        ),
-                        title: Text('Messages'),
-                      ),
-                      new BottomNavigationBarItem(
-                          icon: Icon(
-                            Icons.person,
-                            size: 30,
-                            color: GlobalConstUI.greyColor,
-                          ),
-                          title: Text('Profile'))
-                    ],
-                  ),
-                )),
-
-        ),
+            BootomNavigationBar(),
           ],
         )));
   }
