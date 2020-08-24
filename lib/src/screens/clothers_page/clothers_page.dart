@@ -89,14 +89,11 @@ class _ClothersPageState extends State<ClothersPage> {
                   ),
                 ),
                 padding: EdgeInsets.only(top: 100)),
-                Container(
-                  padding: EdgeInsets.only(top: 580), 
-                  child: BootomNavigationBar(),
-                )
                 
           ],
         ),
       ),
+      bottomNavigationBar: BootomNavigationBar(),
     );
   }
 }

@@ -22,3 +22,10 @@ The challenge of the project is to create the design in a layout available in Dr
 </h1>
 
 
+## other screens
+
+<h1 align="center">
+    <img src="screenshots/homepage.jpg" width="200">
+    <img src="screenshots/clotherspage.jpg" width="200">
+    <img src="screenshots/notificationspage.jpg" width="200">
+</h1>

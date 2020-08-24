@@ -141,18 +141,14 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
                   ],
                 ),
               ],
             ),
-            SizedBox(
-              height: 40,
-            ),
-            BootomNavigationBar(),
+            //BootomNavigationBar(),
           ],
-        )));
+        )),
+        bottomNavigationBar: BootomNavigationBar(),
+        );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:clone_layout/src/const/global_const.dart';
+import 'package:clone_layout/src/screens/home_page/home_page.dart';
 import 'package:clone_layout/src/screens/notifications_page/notifications_page.dart';
 import 'package:flutter/material.dart';
 
@@ -40,10 +41,16 @@ class BootomNavigationBar extends StatelessWidget {
               // new
               items: [
                 new BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home,
-                    size: 30,
-                    color: Colors.white,
+                  icon: InkWell(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
+                    },
+                    child: Icon(
+                      Icons.home,
+                      size: 30,
+                      color: GlobalConstUI.greyColor,
+                    ),
                   ),
                   title: Text('home'),
                 ),
@@ -79,7 +86,7 @@ class BootomNavigationBar extends StatelessWidget {
                     child: Icon(
                       Icons.notifications,
                       size: 30,
-                      color: GlobalConstUI.greyColor,
+                      color: Colors.white,
                     ),
                   ),
                   title: Text('notif'),
